@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        display: none;
+        position: absolute;
+        bottom: 1.5rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="" />
+    </header>
+    <main>
+      <form>
+        <div class="input__container">
+          <label for="form__input--bill">Bill</label>
+          <div>
+            <input type="number" class="form__input--bill" />
+            <img src="images/icon-dollar.svg" alt="" />
+          </div>
+        </div>
+        <label for="form__btn--tip">Select Tip %</label>
+        <button class="form__btn--tip">5%</button>
+        <button class="form__btn--tip">10%</button>
+        <button class="form__btn--tip">15%</button>
+        <button class="form__btn--tip">25%</button>
+        <button class="form__btn--tip">50%</button>
+        <input type="text" value="Custom" class="form__input--custom" />
+        <div class="input__container people-input__container">
+          <label for="" class="people__label">Number of People</label>
+          <label for="" class="hidden people__label--invalid"
+            >Can't be less than or equal zero</label
+          >
+          <div>
+            <input type="number" class="form__input--people" />
+            <img src="images/icon-person.svg" alt="" />
+          </div>
+        </div>
+      </form>
+      <div class="results">
+        <div class="result">
+          <p>Tip Amount<br /><span>/ person</span></p>
+          <p class="tip--amount">$0.00</p>
+        </div>
+        <div class="result">
+          <p>
+            Total<br />
+            <span>/ person</span>
+          </p>
+          <p class="total--amount">$0.00</p>
+        </div>
+        <button class="results__btn--reset">RESET</button>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ezzat AbdelRazek</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
